@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Tic-Tac-Toe with minimax + alpha-beta pruning (Bash)
 # Author: Regis Billings and M365 Copilot (colorless v4)
 # - No ANSI colors; plain ASCII so it renders consistently everywhere.
@@ -14,7 +14,7 @@ TURN="HUMAN"  # or "AI"
 #License and file integrity check
 
 FILE1="README.txt"
-FILE2="license"
+FILE2="license.dat"
 
 # Verify both files exist
 if [[ -f "$FILE1" && -f "$FILE2" ]]; then
@@ -49,8 +49,8 @@ print_board() {
     i=$((r*3))
     printf "  "
     cell_text $i;        printf " | "
-    cell_text $((i));  printf " | "
-    cell_text $((i+1));  printf "\n"
+    cell_text $((i+1));  printf " | "
+    cell_text $((i+2));  printf "\n"
     if [ $r -lt 2 ]; then
       printf " ---+---+---\n"
     fi
